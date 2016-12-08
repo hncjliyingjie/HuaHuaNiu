@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FML-iD-b3R">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zhi Gong View Controller-->
+        <scene sceneID="1Bm-qI-vXx">
+            <objects>
+                <viewController id="FML-iD-b3R" customClass="YHZhiGongViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZQ4-fN-nB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="oNE-IZ-OgS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="haF-P3-Pr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOm-cN-y0v">
+                                <rect key="frame" x="0.0" y="64" width="414" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmG-fb-Fat">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="品牌特区">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="0.11840077910000001" blue="0.1619792776" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pinpaiButton:" destination="FML-iD-b3R" eventType="touchUpInside" id="saO-oO-WeH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg4-QV-lCg">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="兑换商品">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="1" green="0.11840077910000001" blue="0.1619792776" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="duihuanButton:" destination="FML-iD-b3R" eventType="touchUpInside" id="Whq-ri-usH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cmG-fb-Fat" firstAttribute="top" secondItem="qOm-cN-y0v" secondAttribute="top" id="0rA-TZ-lFN"/>
+                                    <constraint firstAttribute="bottom" secondItem="cmG-fb-Fat" secondAttribute="bottom" id="6WO-3d-O2O"/>
+                                    <constraint firstItem="cmG-fb-Fat" firstAttribute="leading" secondItem="Kg4-QV-lCg" secondAttribute="trailing" id="7Cx-07-s6M"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kg4-QV-lCg" secondAttribute="bottom" id="JTR-I0-WhQ"/>
+                                    <constraint firstItem="Kg4-QV-lCg" firstAttribute="top" secondItem="qOm-cN-y0v" secondAttribute="top" id="kwe-LC-Z3a"/>
+                                    <constraint firstItem="Kg4-QV-lCg" firstAttribute="leading" secondItem="qOm-cN-y0v" secondAttribute="leading" id="oKe-7m-a4l"/>
+                                    <constraint firstAttribute="height" constant="40" id="xi1-15-BlU"/>
+                                    <constraint firstItem="cmG-fb-Fat" firstAttribute="width" secondItem="Kg4-QV-lCg" secondAttribute="width" id="xix-lh-tdg"/>
+                                    <constraint firstAttribute="trailing" secondItem="cmG-fb-Fat" secondAttribute="trailing" id="zHe-Ue-JAA"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hal-4U-SBy" customClass="YHSeconderScrollViewController">
+                                <rect key="frame" x="0.0" y="104" width="414" height="632"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qOm-cN-y0v" firstAttribute="leading" secondItem="haF-P3-Pr1" secondAttribute="leadingMargin" constant="-20" id="4la-zp-n1d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qOm-cN-y0v" secondAttribute="trailing" constant="-20" id="CMR-pr-dED"/>
+                            <constraint firstItem="qOm-cN-y0v" firstAttribute="top" secondItem="ZQ4-fN-nB7" secondAttribute="bottom" id="LBF-v4-eL3"/>
+                            <constraint firstItem="oNE-IZ-OgS" firstAttribute="top" secondItem="Hal-4U-SBy" secondAttribute="bottom" id="Yax-0M-RTX"/>
+                            <constraint firstItem="Hal-4U-SBy" firstAttribute="leading" secondItem="haF-P3-Pr1" secondAttribute="leadingMargin" constant="-20" id="pZk-mh-pwJ"/>
+                            <constraint firstItem="Hal-4U-SBy" firstAttribute="top" secondItem="qOm-cN-y0v" secondAttribute="bottom" id="qHV-GI-EBB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hal-4U-SBy" secondAttribute="trailing" constant="-20" id="x48-9f-0Ud"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yyr-rb-5Xh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="DuiHuanButton" destination="Kg4-QV-lCg" id="IR6-TX-tLv"/>
+                        <outlet property="PinPaiButton" destination="cmG-fb-Fat" id="Oj3-r5-Hak"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QcK-s5-Il3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="-207"/>
+        </scene>
+    </scenes>
+</document>

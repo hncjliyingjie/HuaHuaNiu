@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="freebackCell" rowHeight="60" id="KGk-i7-Jjw" customClass="ZYDetailFreebackTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yzd-Wr-N5N">
+                        <rect key="frame" x="20" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="KU2-3G-aR5"/>
+                            <constraint firstAttribute="width" constant="40" id="ZRg-Kv-LAE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNT-wG-4i1">
+                        <rect key="frame" x="80" y="10" width="26" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Xd2-h5-P2g"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5w-Dt-Dxw">
+                        <rect key="frame" x="116" y="10" width="26" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="mHi-mY-rXm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3st-w7-c6s">
+                        <rect key="frame" x="80" y="30" width="56" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Yr4-d3-U8m"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Yzd-Wr-N5N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2g6-9s-YuU"/>
+                    <constraint firstItem="sNT-wG-4i1" firstAttribute="leading" secondItem="Yzd-Wr-N5N" secondAttribute="trailing" constant="20" id="Gke-E8-vCC"/>
+                    <constraint firstItem="V5w-Dt-Dxw" firstAttribute="leading" secondItem="sNT-wG-4i1" secondAttribute="trailing" constant="10" id="PKn-RM-uk2"/>
+                    <constraint firstItem="sNT-wG-4i1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bVN-s7-jnf"/>
+                    <constraint firstItem="3st-w7-c6s" firstAttribute="leading" secondItem="Yzd-Wr-N5N" secondAttribute="trailing" constant="20" id="lYo-tw-9PE"/>
+                    <constraint firstItem="V5w-Dt-Dxw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="y4W-K0-r4l"/>
+                    <constraint firstItem="Yzd-Wr-N5N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yoF-78-3bY"/>
+                    <constraint firstItem="3st-w7-c6s" firstAttribute="top" secondItem="sNT-wG-4i1" secondAttribute="bottom" id="yy6-RU-MjC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="freebackLabel" destination="3st-w7-c6s" id="EVV-yM-KDr"/>
+                <outlet property="iconImageView" destination="Yzd-Wr-N5N" id="rwh-Co-kjl"/>
+                <outlet property="nameLabel" destination="sNT-wG-4i1" id="yI2-tE-PFY"/>
+                <outlet property="timeLabel" destination="V5w-Dt-Dxw" id="5hA-mb-8w6"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="254.5"/>
+        </tableViewCell>
+    </objects>
+</document>

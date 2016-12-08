@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuaHuaNiu/Home(&#x9996;&#x9875;)/Controller/WechatShortVideo/WechatShortVideoController.m"
+            timestampString = "478682366.254996"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
+            landmarkName = "-saveCapture"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WechatShortVideoController saveCapture]"
+                  moduleName = "HuaHuaNiu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuanzhi/Downloads/%E8%A7%86%E9%A2%91%E5%AE%8C%E5%96%84%E7%89%88%E5%89%AF%E6%9C%AC%EF%BC%88%E4%B8%BB%EF%BC%89%202%202/HuaHuaNiu/Home(%E9%A6%96%E9%A1%B5)/Controller/WechatShortVideo/WechatShortVideoController.m"
+                  timestampString = "480581918.827916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "328"
+                  endingLineNumber = "328"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[WechatShortVideoController saveCapture]_block_invoke"
+                  moduleName = "HuaHuaNiu"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yuanzhi/Downloads/%E8%A7%86%E9%A2%91%E5%AE%8C%E5%96%84%E7%89%88%E5%89%AF%E6%9C%AC%EF%BC%88%E4%B8%BB%EF%BC%89%202%202/HuaHuaNiu/Home(%E9%A6%96%E9%A1%B5)/Controller/WechatShortVideo/WechatShortVideoController.m"
+                  timestampString = "480581918.828107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "328"
+                  endingLineNumber = "328"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuaHuaNiu/Home(&#x9996;&#x9875;)/Controller/WechatShortVideo/WechatShortVideoController.m"
+            timestampString = "478683108.961486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
+            landmarkName = "-saveCapture"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuaHuaNiu/DingDanJSViewController.m"
+            timestampString = "479351084.883969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "414"
+            endingLineNumber = "414"
+            landmarkName = "-makeZhiFuBaoZhifu"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HuaHuaNiu/WanShangViewController.m"
+            timestampString = "480565545.213007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-makeBarItem"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

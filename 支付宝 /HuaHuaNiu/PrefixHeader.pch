@@ -1,0 +1,516 @@
+//
+//  PrefixHeader.pch
+//  HuaHuaNiu
+//
+//  Created by 张燕 on 15-3-2.
+//  Copyright (c) 2015年 张燕. All rights reserved.
+//
+
+
+
+#ifndef HuaHuaNiu_PrefixHeader_pch
+#define HuaHuaNiu_PrefixHeader_pch
+
+
+#ifdef __OBJC__
+#import "QRCodeGenerator.h"
+#import "RequestManger.h"
+#import "AlexModel.h"
+
+#import "UIView+MJ.h"
+#import "UIImage+CH.h"
+#import "UIBarButtonItem+CH.h"
+#import "HGBaseMethod.h"
+
+#import "UIImageView+WebCache.h"
+#import "MJExtension.h"
+#import "HGBaseMethod.h"
+#import "Refresh.h"
+
+#import "AFHTTPRequestOperationManager.h"
+
+#import "UILabel+LableHeight.h"
+
+#import "IQKeyboardManager.h"
+#import "Define.h"
+
+
+
+/**
+ *  判断一个字符串是否为空
+ *
+ *  @param string 字符串
+ *
+ *  @return 返回结果
+ */
+static inline BOOL ICIsStringEmpty(NSString *string){
+    
+    if (string == nil) {
+        return YES;
+    }
+    
+    if (string.length == 0) {
+        return YES;
+    }
+    
+    if ([string isEqualToString:@"<null>"]) {
+        return YES;
+    }
+    
+    if ([string isEqualToString:@"(null)"]) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+#pragma mark - Block
+
+/**
+ *  弱引用对象
+ *
+ *  @param self 当前对象
+ *
+ *  @return 弱应用对象
+ */
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
+/**
+ *  强引用对象
+ *
+ *  @param self 当前对象
+ *
+ *  @return 强引用对象
+ */
+#define STRONGSELF typeof(self) __strong strongSelf = self;
+
+
+
+#endif
+// 屏幕尺寸
+#define XMGScreenH [UIScreen mainScreen].bounds.size.height
+#define XMGScreenW [UIScreen mainScreen].bounds.size.width
+
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define HGfont(s)  [UIFont systemFontOfSize:(s)]
+#define HGColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define HGolorAlpha(r,g,b,alp) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(alp)]
+#define MainCorlor [UIColor colorWithRed:0.047 green:0.365 blue:0.663 alpha:1]
+
+#define HGShowTypeOne @"a"
+#define HGShowTypeMore @"b"
+
+
+// 判断是否问 ios 7
+#define IS_IOS_7 ([[[UIDevice currentDevice] systemVersion] doubleValue]>=7.0)?YES:NO
+
+//ios6 和ios7 的适配
+#define IOS_Frame     if ([[[UIDevice currentDevice] systemVersion]doubleValue]>=7.0) {self.navigationController.navigationBar.translucent= NO; }
+/**
+ * 默认设置
+ */
+
+#define BarColor [UIColor colorWithRed:264/255.0 green:125/255.0 blue:137/255.0 alpha:1]
+
+#define StatusBarStyle UIStatusBarStyleLightContent
+
+#define StateBarHeight ((IS_IOS_7)?20:0)
+
+#define NavBarHeight ((IS_IOS_7)?65:45)
+
+#define BottomHeight ((IS_IOS_7)?49:0)
+//屏幕  高度
+#define ScreenHeight ((IS_IOS_7)?([UIScreen mainScreen].bounds.size.height):([UIScreen mainScreen].bounds.size.height - 20))
+// 屏幕宽
+#define ConentViewWidth  [UIScreen mainScreen].bounds.size.width
+
+//  出去导航栏高度
+#define ConentViewHeight ((IS_IOS_7)?([UIScreen mainScreen].bounds.size.height - NavBarHeight):([UIScreen mainScreen].bounds.size.height - NavBarHeight -20))
+// 可用的空间大小(0.20.320.Height)
+#define ConentViewFrame CGRectMake(0,NavBarHeight,ConentViewWidth,ConentViewHeight)
+//             (0.20.320.Height)
+#define MaskViewDefaultFrame CGRectMake(0,NavBarHeight,ConentViewWidth,ConentViewHeight)
+//             (0.0.320.Height)
+#define MaskViewFullFrame CGRectMake(0,0,ConentViewWidth,[UIScreen mainScreen].bounds.size.height-20)
+
+#define BackColor [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1]
+
+#define ZHUSE [UIColor colorWithRed:255/255.0 green:125/255.0 blue:137/255.0 alpha:1]
+//http://182.92.66.70:8080
+#pragma  mark  网址mainmin@"
+#define fujian @"http://192.168.1.115:8080/dyc/"
+#define mainmin @"http://daiyancheng.cn/"
+//首页
+#define mainUrl mainmin@"appmain/getadinfo.do"
+//获得所有城市
+#define CityList mainmin@"appmain/all_area.do?token=test"
+// 万商首页界面 is_ll 0  坐标 1 区域Id
+#define WanShang mainmin@"appstore/wsindex.do"
+
+
+
+//  图片加载
+#define IMaUrl  @"http://daiyancheng.cn/%@"
+//http://daiyancheng.cn/
+//  支付宝回调url
+#define ZHIFUHD mainmin@"apporder/order_pay_success.do?token=test&order_id=%@&oeder_type=%@"
+
+//  支付宝url
+#define ZHIFU_REQUEST mainmin@"apporder/order_sign.do"
+//  发广告支付宝回调url
+#define FGGZHIFUHD mainmin@"apporder/order_pay_success.do?token=test&order_id=%@&pay_type=%@"
+
+// 商店详情
+#define StoreXQ mainmin@"appstore/store_info.do?token=test&id=%@&member_id=%@"
+
+//  寻找代言人
+#define FindDaiRen  mainmin@"appstore/getBindStore.do"
+
+// 砸金蛋
+#define JINDAN mainmin@"appmain/to_lottery.do?member_id=%@"
+
+// 商家商店
+#define ShangJiaStore mainmin@"appstore/store_goods.do?token=test&store_id=%@&page=%d"
+
+//  产品详情
+#define ProductXiangqing mainmin@"appgoods/goods_info.do?token=test&id=%@&page=%d&member_id=%@"
+
+//  获取鲜花
+#define FLOWER mainmin@"appmember/add_flowers.do?token=test&member_id=%@&store_id=%@&goods_id=%@&ad_id=%@"
+
+
+//  收藏
+//type 类型 goods或store  商品或商店item_id 商店或商品的id   user_id 用户id
+#define SHOUCANG mainmin@"appmember/add_favorite.do?token=test&member_id=%@&type=%@&item_id=%@"
+
+
+//  加入购物车 请求所需数据：  goods_id 商品id  user_id 用户id   quantity 商品数量
+
+#define GOUWUCHE mainmin@"appcart/add_cart.do?token=test&goods_id=%@&member_id=%@&quantity=%@"
+
+// 万商 分类
+#define WanshangFenLei mainmin@"appstore/getstorelist.do?token=test&cate_id=%@&ll=%@&is_ll=%@&order=%@&page=%d"
+
+//万商  分类  区域   排序
+#define wanshangfenleipaixu mainmin@"index.php?app=store_api&cate_id=%@&act=getstorelist&ll=%@&order=%@&is_ll=%@"
+
+// 万商更多
+#define WANMOREMM mainmin@"appstore/getscategory.do"
+
+//  搜索结果  商家 或者  产品
+
+#define SearChSte mainmin@"appstore/getsearchinfo.do?token=test&type=%@&name=%@&ll=%@"
+//产品搜索
+#define SEARFORPRO mainmin"appstore/getsearchinfo.do?token=test&type=%@&name=%@&ll=%@"
+#pragma  mark  首页功能
+
+//看看有奖
+#define LOOKSTR mainmin@"appprize/prize_list.do?token=test&ll=%@&page=%d&member_id=%@"
+
+// 看看有奖 详情
+#define LOOKXIANGQING mainmin@"appprize/prize_detail.do?token=test&advalue=%@"
+
+//  进入详情 收益  //id 广告id   user_id 用户id
+#define JRSHOUYI mainmin@"appprize/prize_profit.do?token=test&member_id=%@&ad_name=@%@&advalue=%@"
+
+// 看看有奖分享链接
+#define FenXiangLJ @"http://daiyancheng.cn/appshare/storeinfo.do?key=%@"
+#define FenXiangshLJ @"http://daiyancheng.cn/appshare/goodsinfo.do?key=%@"
+#define FenXiangSQ @"http://daiyancheng.cn/appshare/picinfo.do?key=%@"
+#define FenXiangErWeiMa @"http://daiyancheng.cn/appmember/member_reg_page.do?token=test&member_id=%@"
+//我有粉丝
+#define MYFENSI mainmin@"appfun/myfans.do"
+
+// 换花篮
+#define ChangHL mainmin@"index.php?app=flower_api&act=basket2flower&user_id=%@"
+
+//  代金券
+#define DAIJINQUAN  mainmin"appvoucher/my_voucherlist.do?token=test&member_id=%@"
+ // 代金券详情
+#define DAIXIANGQING mainmin@"appvoucher/voucher_detail.do?token=test&id=%@"
+  // 获取代金券
+#define GEtDaiJIn mainmin@"appvoucher/getstorebyvoucher.do?token=test&ll=%@&page=%d"
+  // 添加代金券
+#define ADDDAIJINQUAN mainmin@"appvoucher/voucher_add.do?token=test&member_id=%@&vid=%@"
+//删除代金券
+#define DELDAIJINQUAN mainmin@"appvoucher/voucher_del.do?token=test&vcode=%@"
+
+//我来代言
+#define MYDaiY  mainmin@"appstore/get_histbind_store.do?token=test&member_id=%@"
+
+#define DAIYAN mainmin@"appstore/getBindStore.do?token=test&member_id=%@"
+// 关联删除
+#define DELEGL mainmin@"appstore/del_bind_store.do?token=test&id=%@"
+
+// 推荐绑定商家
+#define TUIJIANBANGD mainmin@"appstore/bind_store.do?token=test&page=%d"
+// 绑定商家
+#define BANGSTORESS mainmin@"appstore/store_bind.do?token=test&member_id=%@&store_id=%@"
+
+// 真的免费
+#define TureStr mainmin@"appgoods/reallyfree.do?token=test&page=%d&ll=%@&member_id=%@"
+// 抢购
+
+#define GETMIANF mainmin@"appgoods/reallyfree_add.do?token=test&member_id=%@&gf_id=%@"
+  // 真么免费详情
+#define TureXQStr  mainmin@"appgoods/free_goods_info.do?token=test&id=%@"
+
+#define TureDel  mainmin@"appgoods/free_goods_info.do?token=test&id=%@"
+
+// 真的免费记录
+#define ZHDEMIANHOST mainmin@"appgoods/free_history.do?token=test&member_id=%@"
+
+#define ZM_DEL mainmin@"appgoods/del_free.do?token=test&id=%@"
+
+
+// 诚邀入驻
+   // 区域代理申请
+#define QUYUDAILI mainmin@"appjon/agenter_add.do"
+
+//资源整合
+#define ZIYUANZHENHE mainmin@"appjon/resources_add.do"
+
+#pragma mark 到家
+
+#define DAOJIAStr mainmin@"appstore/djindex.do?token=test&ll=%@"
+
+#pragma mark 大象网
+
+#define Daxiangshouye @"http://city.hntv.tv/e/api/getNewsList.php?table=news&classid=2&pageSize=40&pageIndex=1&&appkey=e7627f53d4712552f8d82c30267d9bb4"
+
+#pragma  mark 直供
+//  直供坐标
+#define ZhiGongZuoBiao mainmin@"appstore/cgindex.do?token=test&cstate=0&ll=%@&page=%d&order=%@&cate_id=%@&proid="
+
+// 直供 区域
+#define ZhiGongQuID  mainmin@"appstore/cgindex.do?token=test&cstate=1&ll=%@&page=%d&order=%@&cate_id=%@&proid="
+// 更多评论
+#define MOREPLA mainmin@"index.php?app=store_api&act=getcomments&store_id=%@"
+
+#pragma mark 我的
+// 登录
+#define DengLu mainmin@"appmember/login.do"
+
+// 注册
+#define ZhuCe mainmin@"appmember/reg.do"
+
+// 注册的验证
+#define YanZFORZHUCE mainmin@"appmain/getcode.do"
+
+//注册协议
+#define XIEYIStr mainmin@"appmain/agreement.do?token=test&agreement_type=member_reg_agreement"
+
+// 收货地址
+#define SHOUHUODIZHISR mainmin@"appmember/distr_address.do?token=test&member_id=%@"
+
+// 获取所有区域
+#define AddSHDZ mainmin@"appmain/all_area.do?token=test"
+
+// 设置为默认
+#define MOreAddRESS mainmin@"appmember/update_default_address.do?token=test&member_id=%@&address_id=%@"
+
+//  添加地址
+#define ADDADDRESS mainmin@"appmember/add_address.do"
+
+// 修改登录密码
+#define CHANGEMIMA mainmin@"appmember/up_login_pwd.do"
+
+// 支出明细
+#define ZHCHUMINGXI mainmin@"appmember/my_pay_detail.do?token=test&member_id=%@&page=%d"
+
+// 收入明细
+#define SHOURUMINGXI mainmin@"appmember/my_income_detail.do?token=test&member_id=%@&page=%d"
+
+// 提现
+#define TIXIAN mainmin@"appmember/withdraw.do"
+
+//我的银行卡
+#define WODEYINHANGKA mainmin@"appmember/mybankcard.do?token=test&member_id=%@"
+
+// 删除银行卡
+#define DELEYHK mainmin@"appmember/bankcard_del.do?token=test&member_id=%@&bankcard_id=%@"
+
+// 添加银行卡
+#define ADDBANKCARD mainmin@"appmember/add_bankcard.do?token=test&member_id=%@&card_number=%@&name=%@"
+
+// 我的订单
+#define DingDanDetail mainmin@"apporder/order_detail.do?token=test&member_id=%@&order_id=%@"
+
+// 我的订单
+#define MYDingDan mainmin@"apporder/my_orders.do?token=test&member_id=%@"
+
+// 订单通用
+#define DingDan mainmin@"apporder/mypage_orders.do?token=test&member_id=%@&currentPage=%d&showCount=%d&status=%@"
+// 所有的订单
+#define ALLDingDan mainmin@"apporder/mypage_orders.do?token=test&member_id=%@&currentPage=%d&showCount=%d"
+// 待付款订单
+#define PAYDingDan mainmin@"apporder/mypage_orders.do?token=test&member_id=%@&currentPage=1&showCount=5&status=1"
+// 待收货订单
+#define GETDingDan mainmin@"apporder/mypage_orders.do?token=test&member_id=%@&currentPage=1&showCount=5&status=3,4"
+// 待评价订单
+#define SAYDingDan mainmin@"http://daiyancheng.cn/apporder/mypage_orders.do?token=test&member_id=%@&status=5"
+// 退款的订单
+#define RefundDingDan mainmin@"http://daiyancheng.cn/apporder/mypage_orders.do?token=test&member_id=%@&currentPage=1&showCount=5&status=8,9"
+// 取消订单
+#define CancelDingDan mainmin@"apporder/order_cancel.do"
+// 确认收货
+#define CenterDingDan mainmin@"apporder/order_receive.do"
+// 退款详情
+#define BackDingDan mainmin@"apporder/order_refund.do?token=test&member_id=%@&order_id=%@"
+// 确认退款
+#define CenterBack mainmin@"apporder/refund_add.do"
+// 评价详情
+#define SayDingDanDetail mainmin@"appmember/evalution.do?token=test&member_id=%@&orderdetail_id=%@"
+// 发布评价
+#define Say mainmin@"appmember/add_evalution.do"
+// 图片上传
+#define imageUp fujian@"appfile/uploadfile.do?token=test&member_id=1&type=ad"
+
+// 广告
+
+#define SendGG mainmin@"appprize/prize_add.do"
+
+#define GGList mainmin@"appprize/prize_my.do?token=test&member_id=%@&currentPage=%d"
+
+//帮助
+//#define HelpCenter mainmin@"appmember/helpCenter.do?token=test"
+#define HelpCenter mainmin@"appmember/helpTip.do?token=test&member_id=%@"
+
+//收益
+#define UpProfit mainmin@"appmember/upProfit.do?token=test&member_id=%@"
+
+// 获取运费
+#define MakeGetYUN mainmin@"index.php?app=order_api&act=order_sure&user_id=%@&store_id=%@"
+
+// 我的购物车
+#define MYGWC mainmin@"appcart/my_cart.do?token=test&member_id=%@"
+
+// 改变数量
+#define CHANGNUMBERFORGW mainmin@"appcart/update_num.do?token=test&cart_id=%@&quantity=%@"
+
+// 购物车删除
+#define DELEGwC mainmin@"appcart/del_cart.do?token=test&cart_id=%@"
+
+// 提交订单
+#define AddDingDan mainmin@"apporder/order_add.do"
+// 添加评论
+#define AddPL mainmin@"appmember/add_evalution.do?token=test&goods_id=%@&content=%@&member_id=%@"
+
+// 我的收藏
+#define MYSHOUCANG mainmin@"appmember/my_collect.do?token=test&member_id=%@"
+// 删除收藏
+#define DELEShouCAN mainmin@"appmember/del_favorite.do?token=test&favorite_id=%@"
+// 得到用户的信息
+#define YONGHUMessage mainmin@"appmember/member_info.do?token=test&member_id=%@"
+
+// 修改个人信息
+#define CHANGMESSAGE mainmin@"appmember/up_info.do?token=test&member_id=%@&%@=%@"
+
+// 邀请粉丝
+#define INVITATE mainmin@"appmember/member_reg_page.do?token=test&member_id=%@"
+
+// 忘记密码 获取验证码
+#define  FORGETGETYZM mainmin@"appmain/getcode.do?token=test&mobile=%@"
+// 忘记密码
+#define FORGETMIMA mainmin@"appmember/up_login_pwd.do?token=test&mobile=%@&new_pwd=%@&old_pwd="
+//视频列表
+#define SHIPIN_LIST mainmin@"asdf";
+
+//求职列表
+#define QIUZHI_LIST mainmin@"appwork/my_applyjoin.do?token=test&member_id=%@"
+//求职详情
+#define QIUZHI_DETAIL mainmin@"appwork/apply_join_info.do?token=test&apply_join_id=%@"
+//求职申请
+#define QIUZHI_SHENQING mainmin@"appwork/apply_join_add.do"
+#define QIUZHI_SHENQING1 mainmin@"appwork/apply_join_add.do?token=test&member_id=%@&name=%@&sex=%@&age=%@&title=%@&salary=%@&&mobile=%@&work_experience=%@&remark=%@"
+//招聘列表
+#define ZHAOPIN_LIST mainmin@"appwork/store_joins.do?token=test&page=1"
+
+//招聘详情
+#define ZHAOPIN_DETAIL mainmin@"appwork/join_info.do?token=test&join_id=%@"
+
+
+
+
+#pragma mark zhangjinjing
+
+#define mark  代言列表网址
+#define DYListUrl @"http://101.200.90.192:%@/%@"
+//地域筛选前面的头部分
+#define MainDYURL @"http://daiyancheng.cn/"
+#define SXURL @"http://daiyancheng.cn/appmain/all_area.do?token=test"
+
+//首页搜索
+
+#define SOUSUOURL @"http://101.200.90.192:8180/dyc/appwemedia/wemediaList.do?token=test&member_id=1&type=0"
+//获取图片网址主题部分
+#define DYSTRRING @"8090"
+//获取图片网址端口号
+
+
+#define DYUrl @"http://101.200.90.192:8180/dyc"
+
+//我的-资金管理
+#define ZJURL @"/appmember/getCapital.do?token=test&userId="
+//自媒体首页
+#define ZMTMainURL @"/appwemedia/wemediaList.do?"
+//自媒体详情
+#define ZMTMOREURL @"/appwemedia/wemediaDetail?token=test&id="
+//地域筛选
+#define DYSXURL @"appmain/all_area.do?token=test"
+//行业筛选
+#define HYSXURL @"/appwemedia/professList.do?token=test"
+//价格筛选
+#define PriceZMTSXURL @"/appwemedia/mediaPriceQualification.do?token=test"
+//好友筛选
+#define FriendSXURL @"/appwemedia/funsQualification.do?token=test"
+
+//资源首页
+#define ZYMainURL @"/appResource/resourceList.do?"
+//资源列表
+#define ZYLISTURL @"/appResource/resourceList.do?token=test&type=0&name="
+//资源详情
+#define ZYLISTMOREURL @"/appResource/resourceDetail.do?token=test&type=0&id="
+//价格筛选
+#define PriceZYSXURL @"/appResource/priceQualification.do?token=test"
+//确定下单
+#define DingDanUrl @"appTaskOrder/zfvpay?token=test&order_id=&total_price=&body="
+
+
+//发布支付宝url
+#define ZHIFU_QIANMING @"http://101.200.90.192:8180/dyc/appTaskOrder/zfvpay.do?"
+
+//发布任务支付宝回调url
+#define ZHIFUURL @"http://101.200.90.192:8180/dyc/appTaskOrder/paySuccess?token=test&account_money=%@&pay_money=%@&pay_type=%@&pay_no=%@&pay_message=%@&id=%@"
+//account_money 账户余额  pay_money还需支付金额 pay_type支付方式 0为支付宝 1为微信  pay_no支付宝返回的partner（订单号）  pay_message 订单信息  id 本地的OrderID
+
+//发布任务页面上传图片
+#define PICTUREURL @"http://101.200.90.192:8180/dyc/appfile/uploadfiles.do?token=test"
+
+//接单列表
+#define JDLISTURL @"http://101.200.90.192:8180/dyc/appTaskOrder/taskList.do?token=test&page=0"
+//接单详情
+#define JDMoreUrl @"http://101.200.90.192:8180/dyc/appTaskOrder/taskDetail.do?token=test&id=%@&userid=%@"
+//发现-资讯列表
+#define FindZXURL @"http://101.200.90.192:8180/dyc/appNews/newsList.do?token=test"
+
+
+//我的-认证中心-我的自媒体
+#define MAINMEITIURL @"http://101.200.90.192:8180/dyc/appwemedia/getUserMedia.do?token=test&userId=%@"
+
+//添加自媒体页面认证页面
+#define ADDZMTURL @"http://101.200.90.192:8180/dyc/appwemedia/addMedia.do?token=test&type=%@&name=%@&user_id=%@&price=%@&friends_num=%@&head=%@&open_id=%@"
+
+//发现-资讯详情列表
+#define ZXMoreURL @"http://101.200.90.192:8180/dyc/appNews/newsDetail.do?token=test&id=1"
+//资讯详情-发表评论
+#define ZXPLURL @"http://101.200.90.192:8180/dyc/appNews/addNewsDiscuss.do?token=test&newsId=%@&userId=%@&content=%@"
+
+//发现-发布资讯
+#define FBZXURL @"http://101.200.90.192:8180/dyc/appNews/addNews.do?token=test&add_user=%@type=%@&url=%@&title=%@&image=%@"
+//add_user  用户ID  type 内参。展会。活动。培训 。活动招人
+
+#define BGCOLOR [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1]
+
+#endif

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YHGoodsCollectionCell" id="uRU-ZM-gnv" customClass="YHGoodsCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="161" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="161" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-52-MdO">
+                        <rect key="frame" x="0.0" y="0.0" width="161" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="8DP-op-lmc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kao-7Q-Kax">
+                        <rect key="frame" x="0.0" y="110" width="161" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlQ-3S-caC">
+                        <rect key="frame" x="8" y="137" width="73" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="73" id="8KC-YW-egK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.25568616319999998" blue="0.21164475699999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SO6-4M-Xft">
+                        <rect key="frame" x="80" y="137" width="73" height="17"/>
+                        <accessibility key="accessibilityConfiguration" label="">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="73" id="aY4-dW-VY3"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="Label">
+                                <attributes>
+                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="zlQ-3S-caC" firstAttribute="top" secondItem="kao-7Q-Kax" secondAttribute="bottom" constant="6" id="1Ya-Uw-azs"/>
+                <constraint firstItem="SO6-4M-Xft" firstAttribute="top" secondItem="kao-7Q-Kax" secondAttribute="bottom" constant="6" id="55u-NJ-luK"/>
+                <constraint firstItem="WTk-52-MdO" firstAttribute="top" secondItem="uRU-ZM-gnv" secondAttribute="top" id="9tG-as-9ZG"/>
+                <constraint firstAttribute="trailing" secondItem="kao-7Q-Kax" secondAttribute="trailing" id="LO3-0M-hlj"/>
+                <constraint firstItem="kao-7Q-Kax" firstAttribute="leading" secondItem="uRU-ZM-gnv" secondAttribute="leading" id="W28-d9-DbZ"/>
+                <constraint firstAttribute="trailing" secondItem="SO6-4M-Xft" secondAttribute="trailing" constant="8" id="amN-6r-ciO"/>
+                <constraint firstItem="WTk-52-MdO" firstAttribute="leading" secondItem="uRU-ZM-gnv" secondAttribute="leading" id="dBB-jO-JEK"/>
+                <constraint firstAttribute="trailing" secondItem="WTk-52-MdO" secondAttribute="trailing" id="uPX-vQ-L6K"/>
+                <constraint firstItem="zlQ-3S-caC" firstAttribute="leading" secondItem="uRU-ZM-gnv" secondAttribute="leading" constant="8" id="ude-nK-amU"/>
+                <constraint firstItem="kao-7Q-Kax" firstAttribute="top" secondItem="WTk-52-MdO" secondAttribute="bottom" constant="20" id="zpe-IG-Zfa"/>
+            </constraints>
+            <size key="customSize" width="161" height="220"/>
+            <connections>
+                <outlet property="image" destination="WTk-52-MdO" id="IOJ-CP-q0x"/>
+                <outlet property="nameLable" destination="kao-7Q-Kax" id="iuK-8g-81U"/>
+                <outlet property="numberLable" destination="SO6-4M-Xft" id="qTd-MD-XjJ"/>
+                <outlet property="priceLable" destination="zlQ-3S-caC" id="eYG-AI-iz7"/>
+            </connections>
+            <point key="canvasLocation" x="501.5" y="77"/>
+        </collectionViewCell>
+    </objects>
+</document>
