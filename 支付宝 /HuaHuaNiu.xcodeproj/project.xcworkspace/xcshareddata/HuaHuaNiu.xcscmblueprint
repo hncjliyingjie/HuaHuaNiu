@@ -1,0 +1,42 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E129DADAF1A7AAB34A1AB5B797E7E08719ACF75F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "cee774bb-a712-6e4f-bf7b-e26dd2814935++4948" : {
+
+    },
+    "0f847bac-30dc-4512-ba69-3e1f9cff0a0f++149" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "cee774bb-a712-6e4f-bf7b-e26dd2814935++4948" : 0,
+    "E129DADAF1A7AAB34A1AB5B797E7E08719ACF75F" : 0,
+    "0f847bac-30dc-4512-ba69-3e1f9cff0a0f++149" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C86D814B-72BE-4B9F-B169-83FFE99CD8E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "cee774bb-a712-6e4f-bf7b-e26dd2814935++4948" : "HuaHuaNiu\/%E6%94%AF%E4%BB%98%E5%AE%9D%20\/Toast%20%E8%8F%8A%E8%8A%B1%E8%BD%AC\/",
+    "E129DADAF1A7AAB34A1AB5B797E7E08719ACF75F" : "HuaHuaNiu\/",
+    "0f847bac-30dc-4512-ba69-3e1f9cff0a0f++149" : "HuaHuaNiu\/%E6%94%AF%E4%BB%98%E5%AE%9D%20\/ZBarSDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HuaHuaNiu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "支付宝 \/HuaHuaNiu.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/120.24.214.55",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0f847bac-30dc-4512-ba69-3e1f9cff0a0f++149"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hncjliyingjie\/HuaHuaNiu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E129DADAF1A7AAB34A1AB5B797E7E08719ACF75F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.0.200\/svn\/projects",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "cee774bb-a712-6e4f-bf7b-e26dd2814935++4948"
+    }
+  ]
+}

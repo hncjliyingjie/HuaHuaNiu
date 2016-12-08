@@ -68,7 +68,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //默认是图文详情
+    //默认是图文
     [self imageAndTextAction:self.myHeaderView.imageAndTextButton];
     
     //注册cell
